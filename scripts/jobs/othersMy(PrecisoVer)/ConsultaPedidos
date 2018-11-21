@@ -1,0 +1,21 @@
+SELECT * FROM core_store where store_id = 61 code = 'compet';
+
+SELECT
+	*
+FROM
+	catalog_product_entity
+WHERE
+	sku in(
+		'MON10000',
+		'MON10001',
+		'MON10002',
+		'MON10003',
+		'MON10004',
+		'MON10005',
+		'MON10006',
+		'MON10007'
+	);
+
+SELECT * FROM sales_flat_order_item WHERE store_id = 27 AND sku in ('MON10000', 'MON10001', 'MON10002', 'MON10003', 'MON10004', 'MON10005', 'MON10006', 'MON10007');
+
+SELECT * FROM sales_flat_quote_item WHERE store_id = 27 AND sku in ('MON10000', 'MON10001', 'MON10002', 'MON10003', 'MON10004', 'MON10005', 'MON10006', 'MON10007');

@@ -1,0 +1,1 @@
+SELECT * FROM sales_flat_order WHERE store_id = 2 AND entity_id  BETWEEN 10498 AND 17000

@@ -1,0 +1,17 @@
+DELETE
+FROM
+	catalog_category_product
+WHERE
+	category_id in(
+		1761,
+		1765
+	)
+	AND product_id in(
+		SELECT
+			entity_id
+		FROM
+			catalog_product_entity
+		where
+			sku in('SKU')
+	);
+

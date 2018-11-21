@@ -1,0 +1,88 @@
+DELETE
+FROM
+	catalog_category_product
+WHERE
+	category_id in(
+		1761, -- categoria q será retirado o produto
+		1765  -- #
+	)
+	AND product_id in(
+		SELECT
+			entity_id
+		FROM
+			catalog_product_entity
+		where
+			sku in(
+				'DVL10146',
+				'DVL10123',
+				'DVL10124',
+				'DVL10125',
+				'DVL10218',
+				'DVL10166',
+				'DVL10416',
+				'DVL10153',
+				'DVL10152',
+				'DVL10154',
+				'DVL10418',
+				'DVL10624',
+				'DVL10630',
+				'DVL10170',
+				'DVL10176',
+				'DVL10158',
+				'DVL10213',
+				'DVL10167',
+				'DVL10168',
+				'DVL10379',
+				'DVL10144',
+				'DVL10131',
+				'DVL10420',
+				'DVL10419',
+				'DVL10171',
+				'DVL10172',
+				'DVL10173',
+				'DVL10174',
+				'DVL10233',
+				'DVL10126',
+				'DVL10132',
+				'DVL10221',
+				'DVL10177',
+				'DVL10235',
+				'DVL10179',
+				'DVL10183',
+				'DVL10085',
+				'DVL10082',
+				'DVL10086',
+				'DVL10084',
+				'DVL10083',
+				'DVL10087',
+				'DVL10185',
+				'DVL10186',
+				'DVL10217',
+				'DVL10187',
+				'DVL10232',
+				'DVL10189',
+				'DVL10192',
+				'DVL10632',
+				'DVL10193',
+				'DVL10196',
+				'DVL10134',
+				'DVL10136',
+				'DVL10135',
+				'DVL10137',
+				'DVL10142',
+				'DVL10138',
+				'DVL10139',
+				'DVL10140',
+				'DVL10141',
+				'DVL10143',
+				'DVL10421',
+				'DVL10417',
+				'DVL10122',
+				'DVL10127',
+				'DVL10128',
+				'DVL10129',
+				'DVL10212',
+				'DVL10148',
+				'DVL10209'
+			)
+	);
